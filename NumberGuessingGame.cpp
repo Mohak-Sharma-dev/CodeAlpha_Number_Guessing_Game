@@ -11,44 +11,40 @@ number. Also, display the number of attempts the
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-using namespace std;
 
 int main()
 {
     int number, guess, attempts = 0;
-    srand(time(0));
-    number = rand() % 100 + 1;
+    std::srand(std::time(0));
+    number = std::rand() % 100 + 1;
 
-    cout << "Guess My Number Game\n\n";
+    std::cout << "Guess My Number Game\n\n";
 
     do
     {
-        cout << "Enter a guess between 1 and 100 : ";
-        cin >> guess;
+        std::cout << "Enter a guess between 1 and 100: ";
+        std::cin >> guess;
         attempts++;
 
-
-        if (guess-number > 10)
+        if (guess - number > 10)
         {
-            cout<<"\nThat's too high.\nTry Lower\n";
+            std::cout << "\nThat's too high.\nTry Lower\n";
         }
-
-        else if (guess-number < -10)
+        else if (guess - number < -10)
         {
-            cout<<"\nThat's too low.\nTry higher\n";
+            std::cout << "\nThat's too low.\nTry higher\n";
         }
-        
         else if (guess > number)
         {
-            cout << "\nTry lower\n";
+            std::cout << "\nTry lower\n";
         }
         else if (guess < number)
         {
-            cout << "\nTry higher\n";
+            std::cout << "\nTry higher\n";
         }
         else
         {
-            cout << "\nCorrect! You got it in " << attempts << " attempts!\n";
+            std::cout << "\nCorrect! You got it in " << attempts << " attempts!\n";
         }
     } while (guess != number);
 
