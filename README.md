@@ -1,8 +1,30 @@
-*Number_Guessing_Game*
+# Number Guessing Game  
 
-This repository is a part of CodeAlpha's internship program form Jan 15th 2025 to Feb 15th 2025.
+This project is a simple number guessing game created as part of the CodeAlpha internship program. It demonstrates fundamental programming concepts such as random number generation, input validation, and error handling.  
 
-Using Random number generation, computer generates a number between 1 and 100.
+---
 
-Make your guess. If the difference between guess and number is greater than 10, Computer handles by prompting "That's too high" OR "That's too low"
+## Features  
+
+- **Random Number Generation**:  
+  A random number between 1 and 1000 is generated using the `srand` function, ensuring a unique number on each run.  
+
+- **Hints for Users**:  
+  - If the guess is **within 10** of the actual number, the program provides an encouraging hint.  
+  - If the guess is **outside 10**, it guides the user to narrow their range.  
+
+- **Error Handling**:  
+  The program validates user input, ensuring only whole numbers between 1 and 100 are accepted.  
+
+- **Cross-Platform Compatibility**:  
+  The game runs on Windows, Mac, and Linux, provided the necessary libraries are installed.  
+
+---
+
+## How to Run  
+
+1. Clone the repository from GitHub:  
+   ```bash
+   git clone https://github.com/Mohak-Sharma-dev/CodeAlpha_Number_Guessing_Game
+
 
